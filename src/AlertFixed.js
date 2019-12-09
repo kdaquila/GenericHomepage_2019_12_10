@@ -1,7 +1,7 @@
 import React from 'react';
 import Alert from 'react-bootstrap/Alert';
 
-function MyAlert() {
+function AlertFixed() {
     return (
         <Alert variant="success">
             <Alert.Heading>Hey, nice to see you</Alert.Heading>
@@ -19,4 +19,4 @@ function MyAlert() {
     )
 }
 
-export default MyAlert;
+export default AlertFixed;
