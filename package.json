@@ -12,11 +12,22 @@
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0"
   },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "node-sass": "^4.13.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch-scss": "node-sass src --output src --watch",
+    "compile-scss": "node-sass src/scss/main.scss src/css/main.compiled.css",
+    "prefix-css": "postcss src/css/main.compiled.css --use autoprefixer --verbose -o src/css/main.prefixed.css",
+    "compress-css": "node-sass src/css/main.prefixed.css src/css/main.css --output-style compressed",
+    "build-css": "npm-run-all compile-scss prefix-css compress-css"
   },
   "eslintConfig": {
     "extends": "react-app"

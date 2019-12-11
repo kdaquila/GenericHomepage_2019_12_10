@@ -1,17 +1,20 @@
-import React from 'react'
-import Alert from 'react-bootstrap/Alert'
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+
+import MyNavbar from "./MyNavbar"
+import MyJumbotron from "./MyJumbotron"
+import MyCardDeck from "./MyCardDeck";
+import MyFooter from "./MyFooter";
 
 function Page() {
-    return (
-        <body className="body">
-            <Alert variant="primary">
-                This is a primary alert.
-            </Alert>
-            <Alert variant="secondary">
-                This is a secondary alert.
-            </Alert>
-        </body>
-    )
+    return [
+        <Container>
+            <MyNavbar/>
+            <MyJumbotron/>
+            <MyCardDeck/>
+        </Container>,
+        <MyFooter/>
+    ]
 }
 
 export default Page;
